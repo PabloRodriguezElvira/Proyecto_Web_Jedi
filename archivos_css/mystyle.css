@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background-color: rgb(228, 213, 216);
+}
+
+@media screen and (max-width: 500px) {
+    .foto_movil {
+        margin-left: 6.5rem !important;
+    }
+    .ic_main.ic_main_movil {
+        margin-left: 10px !important;
+    }
+    .contacto {
+        margin-right: 1rem !important;
+    }
+    .hide_movil {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .contacto {
+        margin-right: 4rem !important;
+    }    
+}
+
+.header {
+    height: 60px;
+    background-color: rgb(232, 147, 170);
+}
+
+.principal {
+    min-height: calc(100vh - 120px);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    background-color: rgb(232, 147, 170);
+}
+
+.foto {
+    margin-top: 30px;
+    margin-left: 40px;
+    height: 80%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.barra_nav {
+    height: 60px;
+    background-color: rgb(232, 147, 170);
+}
+
+.home_letra {
+    font-family: titulo;
+    font-size: x-large;
+}
+
+.links_nav {
+    border: 1px solid white;
+    background-color: rgb(211, 186, 219);
+    transition: background-color 0.3s;
+    font-family: titulo;
+    font-size: large;
+}
+
+.social {
+    font-family: titulo;
+    font-size: large;
+}
+
+.links_nav:hover {
+    background-color: rgb(120, 171, 212);
+}
+
+.icono {
+    padding-left: 10px;
+    margin-top: 0.15em;
+    font-size: 2em;
+    color: black;
+}
+
+.iconos_navbar {
+    padding: 0 0.5em;
+}
+
+.borde {
+    padding: 5px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.ic_main {
+    margin-left: 30px !important;
+    margin-bottom: 0.5em !important;
+}
+
+.subtitle {
+    display: inline;
+}
+
+h6 {
+    display: inline;
+}
+
+.lista_info {
+	list-style: none;
+	margin-left: 0.7em;
+	padding-left: 1.2em;
+}
+
+.lista_info li:before {
+	content: "➔";
+	position: relative;
+	left: -0.7em;
+}
+
+.lista_juegos {
+    list-style: none;
+}
+
+.iconos_juegos {
+    width: 20%;
+    height: 90%;
+}
+
+.row.juego {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.amarillo {
+    color: yellow;
+}
+
+.no_margenes {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.fotos_idiomas {
+    width: 10%;
+}
+
+
+
+
