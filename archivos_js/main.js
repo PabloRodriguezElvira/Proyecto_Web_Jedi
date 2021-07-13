@@ -42,17 +42,17 @@ $(window).on("load", async function() {
     }
   
     $("#idiomas").append(
-        `<li class = "pb-2 pepega">${esp.idioma}
+        `<li class = "pb-2">${esp.idioma}
             <span class = "estrellas px-3"></span>
             <span class = "pe-2">${esp.nivel}</span>
             <img src = ${esp.img} alt = ${esp.alt} class = "fotos_idiomas"> 
         </li>
-        <li class = "pb-2 pepega">${cat.idioma}
+        <li class = "pb-2">${cat.idioma}
             <span class = "estrellas px-3"></span>
             <span class = "pe-2">${cat.nivel}</span>
             <img src = ${cat.img} alt = ${cat.alt} class = "fotos_idiomas"> 
         </li>
-        <li class = "pb-2 pepega">${eng.idioma}
+        <li class = "pb-2">${eng.idioma}
             <span class = "estrellas px-3"></span>
             <span class = "pe-2">${eng.nivel}</span>
             <img src = ${eng.img} alt = ${eng.alt} class = "fotos_idiomas"> 
@@ -61,7 +61,7 @@ $(window).on("load", async function() {
 
     insertarEstrellas();  
 
-    
+
     
 
 })
