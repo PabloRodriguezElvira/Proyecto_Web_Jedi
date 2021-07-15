@@ -1,67 +1,101 @@
 $(window).on("load", async function() {
 
-    let db = await axios.get("https://database-proyecto-web.herokuapp.com/info_main");
-    let info = db.data[0];
-    let edu = db.data[1];
-    let prog = db.data[2];
-    let esp = db.data[3];
-    let cat = db.data[4];
-    let eng = db.data[5];
+    try {
+        //Llamada get() a base de datos JSON.
+        const db = await axios.get("https://database-proyecto-web.herokuapp.com/info_main");
 
-    $("#lista_info").append(
-        `<li class = "pb-2">${info.campo1}</li>
-        <li class = "py-2">${info.campo2}</li>
-        <li class = "py-2">${info.campo3}</li>
-        <li class = "py-2">${info.campo4}</li>`
-    )
-    $("#educ").append(
-        `<li class = "pb-2">${edu.campo1}</li>
-        <li class = "py-2">${edu.campo2}</li>
-        <li class = "py-2">${edu.campo3}</li>`
-    )
-    $("#programacion").append(
-        `<li class = "pb-2">${prog.leng1}</li>
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="" aria-valuemax="100">${prog.nivel1}</div>
-        </div>
-        <li class = "py-2">${prog.leng2}</li>
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">${prog.nivel2}</div>
-        </div>
-        <li class = "py-2">${prog.leng3}</li>
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">${prog.nivel3}</div>
-        </div>`
-    )
+        //Declaración de variables
+        const informacion = db.data[0];
+        const edu = db.data[1];
+        const prog = db.data[2];
+        const idiomas = db.data[3];
+        const juegos = db.data[4];
+        const hobbies = db.data[5];
 
-    function insertarEstrellas() {
-        console.log($(".estrellas"));
-        for (let i = 0; i < 5; ++i) {
-            $(".estrellas").append(`<i class="${esp.estrella}"></i>`);
+        //Funciones para insertar los elementos de la página principal.
+        informacion.forEach(function(obj) {
+            $("#lista_info").append(
+                `<li class = "pb-2">${obj.info}</li>`
+            )
+        })
+
+        $("#educ").append(
+            `<div class = "row row-cols-2">
+                <div class = "col-auto" id = "lista_edu"></div>  
+                <div class = "col-2 ms-3 hide_movil">
+                    <img src = ${edu.img} alt = ${edu.alt} width = "180px" height = "100px"> 
+                </div>
+            </div>`
+        )
+
+        function insertarEducacion() {
+            edu.info_edu.forEach(function(obj) {
+                $("#lista_edu").append(`<li class = "pb-2">${obj.inf}</li>`);
+            })
         }
+
+        insertarEducacion();
+
+
+        prog.forEach(function(obj) {
+            $("#programacion").append(
+                `<li class = "pb-2 py-2">${obj.leng}</li>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: ${obj.nivel}%" aria-valuenow="${obj.nivel}" aria-valuemin="" aria-valuemax="100">${obj.nivel}%</div>
+                </div>`
+            )
+        })
+
+        idiomas.forEach(function(obj) {
+            $("#idiomas").append(
+                `<li class = "pb-2">${obj.idioma}
+                    <span class = "px-3 estrellas" id = ${obj.id}></span>
+                    <span class = "pe-2">${obj.nivel}</span>
+                    <img src = ${obj.img} alt = ${obj.alt} class = "fotos_idiomas" style = "width: 10%;"> 
+                </li>`
+            )
+        })
+        
+        function insertarEstrellas() {
+            for (let i = 0; i < 5; ++i) {
+                $("#esp").append(`<i class="${idiomas[0].estrella}"></i>`);
+                $("#cat").append(`<i class="${idiomas[0].estrella}"></i>`);
+            }
+            for (let i = 0; i < 3; ++i) {
+                $("#eng").append(`<i class="${idiomas[0].estrella}"></i>`);
+            }
+            $("#eng").append(`<i class="${idiomas[0].estrella_negra}"></i>`);
+            $("#eng").append(`<i class="${idiomas[0].estrella_negra}"></i>`);
+        }
+
+        insertarEstrellas();  
+        
+        juegos.forEach(function(obj) {
+            $("#juegos").append(
+                `<div class = "col py-3">
+                    <img src = ${obj.img} alt = ${obj.alt} class = "iconos_juegos"><h6 class = "px-2">${obj.name}</h6>
+                </div>`
+            )
+        })
+
+        $("#hobbies").append(
+            `<div class = "row row-cols-2">
+                <div class = "col-auto" id = "hobb"></div>
+                <div class = "col-2 mx-5 hide_movil">
+                    <img src = ${hobbies.img} alt = ${hobbies.alt} width = "120" height = "120"> 
+                </div>
+            </div>`
+        )
+
+        function insertarHobbies() {
+            hobbies.info_hobbies.forEach(function(obj) {
+                $("#hobb").append(`<li class = "py-2">${obj.inf}</li>`);
+            })
+        }
+
+        insertarHobbies();
+    } 
+    catch (error) {
+        console.log(error);
     }
-  
-    $("#idiomas").append(
-        `<li class = "pb-2">${esp.idioma}
-            <span class = "estrellas px-3"></span>
-            <span class = "pe-2">${esp.nivel}</span>
-            <img src = ${esp.img} alt = ${esp.alt} class = "fotos_idiomas"> 
-        </li>
-        <li class = "pb-2">${cat.idioma}
-            <span class = "estrellas px-3"></span>
-            <span class = "pe-2">${cat.nivel}</span>
-            <img src = ${cat.img} alt = ${cat.alt} class = "fotos_idiomas"> 
-        </li>
-        <li class = "pb-2">${eng.idioma}
-            <span class = "estrellas px-3"></span>
-            <span class = "pe-2">${eng.nivel}</span>
-            <img src = ${eng.img} alt = ${eng.alt} class = "fotos_idiomas"> 
-        </li>`
-    )
-
-    insertarEstrellas();  
-
-
-    
-
 })

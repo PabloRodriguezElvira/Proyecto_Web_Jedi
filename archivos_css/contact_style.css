@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Prompt&display=swap');
+
+body {
+    background-color: rgb(228, 213, 216);
+}
+
+@media screen and (max-width: 500px) {
+    .hide_movil {
+        display: none !important;
+    }
+}
+
+.principal {
+    font-family: 'Prompt', sans-serif;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.barra_nav {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 60px;
+    background-color: rgb(232, 147, 170);
+}
+
+.home_letra {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: x-large;
+}
+
+.links_nav {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(211, 186, 219);
+    transition: background-color 0.3s;
+    font-family: titulo;
+    font-size: large;
+}
+
+.links_nav:hover {
+    background-color: rgb(120, 171, 212);
+}
+
+.icono {
+    padding-left: 10px;
+    margin-top: 0.2em;
+    font-size: 2em;
+    color: black;
+}
+
+.iconos_navbar {
+    padding: 0 0.5em;
+}
+
+.social {
+    font-family: titulo;
+    font-size: large;
+}
+
+.formulario {
+    width: 40%;
+    padding: 5px 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.area_texto {
+    height: 8em;
+}
+
+.subtitulo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3em;
+}
+
+.input-group-text.inp {
+    background-color: rgb(211, 186, 219);
+}
+
+.style_alerta {
+    padding: 1.5em;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: red;
+    background-color: rgb(240, 202, 202);
+    position: absolute;
+    top: 5em;
+}
+
+.style_alerta.hit {
+    color: #0f5132 !important;
+    background-color: #d1e7dd !important;
+    border-color: #4fb889 !important;
+}
+
+.alert-dismissible .btn-close {
+    font-size: 13px;
+    padding-top: 1px;
+    padding-right: 1px;
+}
+

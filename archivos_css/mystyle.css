@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Prompt&display=swap');
+
+
 body {
-    margin: 0;
     background-color: rgb(228, 213, 216);
 }
 
@@ -11,7 +13,7 @@ body {
         margin-left: 10px !important;
     }
     .contacto {
-        margin-right: 1rem !important;
+        margin-right: 5px !important;
     }
     .hide_movil {
         display: none !important;
@@ -20,16 +22,12 @@ body {
 
 @media screen and (min-width: 1920px) {
     .contacto {
-        margin-right: 4rem !important;
+        margin-right: 3.2em !important;
     }    
 }
 
-.header {
-    height: 60px;
-    background-color: rgb(232, 147, 170);
-}
-
 .principal {
+    font-family: 'Prompt', sans-serif;
     min-height: calc(100vh - 120px);
 }
 
@@ -37,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60px;
+    height: 60px;
     background-color: rgb(232, 147, 170);
 }
 
@@ -55,25 +53,30 @@ body {
 }
 
 .home_letra {
-    font-family: titulo;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: x-large;
 }
 
 .links_nav {
-    border: 1px solid white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+    border: 2px solid white;
+    border-radius: 5px;
     background-color: rgb(211, 186, 219);
     transition: background-color 0.3s;
-    font-family: titulo;
-    font-size: large;
 }
 
 .social {
-    font-family: titulo;
-    font-size: large;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
 }
 
 .links_nav:hover {
     background-color: rgb(120, 171, 212);
+}
+
+.links_nav:visited {
+    color: black;
 }
 
 .icono {
@@ -84,7 +87,14 @@ body {
 }
 
 .iconos_navbar {
-    padding: 0 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.1em;
+}
+
+.iconos_navbar.foot {
+    padding-top: 0 !important;
+    padding-bottom: 0.2em !important;
 }
 
 .borde {
@@ -99,6 +109,7 @@ body {
 }
 
 .subtitle {
+    font-family: 'Prompt', sans-serif;
     display: inline;
 }
 
@@ -141,9 +152,8 @@ h6 {
     margin-left: 0 !important;
 }
 
-.fotos_idiomas {
-    width: 10%;
-}
+
+
 
 
 
