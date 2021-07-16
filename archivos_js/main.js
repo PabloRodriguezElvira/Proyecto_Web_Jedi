@@ -1,5 +1,4 @@
 $(window).on("load", async function() {
-
     try {
         //Llamada get() a base de datos JSON.
         const db = await axios.get("https://database-proyecto-web.herokuapp.com/info_main");

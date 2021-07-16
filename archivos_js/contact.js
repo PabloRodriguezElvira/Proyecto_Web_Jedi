@@ -1,6 +1,7 @@
 $(window).on("load", async function() {
 
     $("#form").on("submit", function(evt) {
+        //Previene el submit automático del formulario por defecto.
         evt.preventDefault();
 
         //Borra las alertas si ya han sido creadas.

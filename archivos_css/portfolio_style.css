@@ -4,6 +4,17 @@ body {
     background-color: rgb(228, 213, 216);
 }
 
+@media screen and (max-width: 600px) {
+    .iframe_settings {
+        width: 365px !important;
+        height: 233px !important;
+        margin-bottom: 12px !important;
+    }
+    .hide_movil {
+        display: none !important;
+    }
+}
+
 .principal {
     min-height: calc(100vh - 110px);
     font-family: 'Prompt', sans-serif;   
@@ -27,6 +38,10 @@ body {
     border-radius: 5px;
     background-color: rgb(211, 186, 219);
     transition: background-color 0.3s;
+}
+
+.links_nav:hover {
+    background-color: rgb(120, 171, 212);
 }
 
 .social {
@@ -69,5 +84,10 @@ body {
 .subtitulo {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.2em;
+}
+
+.iframe_settings {
+    width: 600px;
+    height: 350px;
 }
 
