@@ -4,15 +4,19 @@ body {
     background-color: rgb(228, 213, 216);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+    .formulario {
+        width: 90vw !important;
+        height: 45vh !important;
+    }
     .hide_movil {
         display: none !important;
     }
 }
 
 .principal {
+    min-height: calc(100vh - 110px);
     font-family: 'Prompt', sans-serif;
-    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,12 +36,12 @@ body {
 }
 
 .links_nav {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
     border: 2px solid white;
     border-radius: 5px;
     background-color: rgb(211, 186, 219);
     transition: background-color 0.3s;
-    font-family: titulo;
-    font-size: large;
 }
 
 .links_nav:hover {
@@ -52,17 +56,25 @@ body {
 }
 
 .iconos_navbar {
-    padding: 0 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.07em;
+}
+
+.iconos_navbar.foot {
+    padding-top: 0 !important;
+    padding-bottom: 0.2em !important;
 }
 
 .social {
-    font-family: titulo;
-    font-size: large;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 10px;
+    font-size: 1.25em;
 }
 
 .formulario {
     width: 40%;
-    padding: 5px 20px;
+    padding: 20px 8px;
     border: 2px solid black;
     border-radius: 15px;
 }
@@ -73,7 +85,7 @@ body {
 
 .subtitulo {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.3em;
 }
 
 .input-group-text.inp {
@@ -100,5 +112,13 @@ body {
     font-size: 13px;
     padding-top: 1px;
     padding-right: 1px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(232, 147, 170);
 }
 
