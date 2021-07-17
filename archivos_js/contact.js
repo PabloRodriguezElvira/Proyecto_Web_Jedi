@@ -1,6 +1,6 @@
 $(window).on("load", async function() {
 
-    $("#form").on("submit", function(evt) {
+    $("#form").on("submit", async function(evt) {
         //Previene el submit automático del formulario por defecto.
         evt.preventDefault();
 
