@@ -33,7 +33,7 @@ $(window).on("load", async function() {
                 </div>`
             )
             try {
-                axios.post("https://database-proyecto-web.herokuapp.com/info_users", { email, name, phone_num, message }); 
+                const res = await axios.post("https://database-proyecto-web.herokuapp.com/info_users", { email, name, phone_num, message }); 
             } 
             catch (error) {
                 console.log(error);
